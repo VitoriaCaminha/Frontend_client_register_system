@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Cadastro</legend>
+        <div>
+          <label id="nome">Nome: </label>
+          <input type="text" name="nome" placeholder="Digite seu nome" maxlength="100">
+        </div>
+        <div>
+          <label id="Telefone">Telefone: </label>
+          <input type="tel" name="Telefone" placeholder="Digite seu Telefone" maxlength="20">
+        </div>
+        <div>
+          <label id="email">E-mail: </label>
+          <input type="email" name="email" placeholder="Digite seu e-mail" maxlength="100">
+        </div>
+        <div>
+          <label id="Logradouro">Logradouro: </label>
+          <input type="text" name="Logradouro" placeholder="Rua onde reside" maxlength="100">
+        </div>
+        <div>
+          <label id="numero">Numero: </label>
+          <input type="number" name="numero" placeholder="Numero">
+        </div>
+        <div>
+          <label id="complemento">Complemento: </label>
+          <input type="text" name="complemento" placeholder="Complemento" maxlength="45">
+        </div>
+        <div>
+          <label id="bairro">Bairro: </label>
+          <input type="text" name="bairro" placeholder="Bairro onde reside" maxlength="30">
+        </div>
+        <div>
+          <label id="cidade">Cidade: </label>
+          <input type="text" name="cidade" placeholder="Cidade onde reside" maxlength="30">
+        </div>
+        <div>
+          <label id="uf">UF: </label>
+          <input type="text" name="uf" placeholder="UF do estado" maxlength="2">
+        </div>
+        <div>
+          <label id="cep">CEP: </label>
+          <input type="number" name="cep" placeholder="CEP do local onde reside">
+        </div>
+        <div>
+          <label id="tipo_cliente">Tipo do cliente: </label>
+          <select name="tipo_cliente">
+            <option value="1">Padrao</option>
+            <option value="2">Prata</option>
+            <option value="3">Bronze</option>
+            <option value="4">Ouro</option>
+            <option value="5">Black</option>
+          </select>
+        </div>
+        <button type="submit">Enviar</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
