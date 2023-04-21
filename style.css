@@ -11,84 +11,253 @@ select {
   font-family: 'Poppins', sans-serif;
 }
 
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 368px;
-  background-color: #121214;
+body {
+  background-color: #aba5a6;
+  margin: 0 0 0 170px;
 }
 
-body {
-  background-color: #e5e5e5;
+h1 {
+  font-size: 40px;
+}
+
+.container_form {
+  display: flex;
+  margin: auto;
+  padding: 70px 0 0;
+}
+
+.left {
+  width: 60%;
+}
+
+.shelf {
+  width: 80%;
+  border-radius: 50px 0 0 50px;
+}
+
+.book1,
+.book2,
+.book3,
+.book4,
+.book5,
+.book6,
+.book7 {
+  position: absolute;
+}
+
+@keyframes leftdownone {
+  0% {
+    transform: translate(-100px, -200px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes leftdowntwo {
+  0% {
+    transform: translate(-100px, -60px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes leftdownthree {
+  0% {
+    transform: translate(-100px, 200px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes topdown {
+  0% {
+    transform: translateY(-200px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rightdownone {
+  0% {
+    transform: translate(150px, -200px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes rightdowntwo {
+  0% {
+    transform: translate(150px, -30px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes rightdownthree {
+  0% {
+    transform: translate(250px, 90px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.book1 {
+  top: 200px;
+  left: 300px;
+  animation: leftdownone 1400ms 350ms;
+}
+
+.book2 {
+  top: 320px;
+  left: 250px;
+  animation: leftdowntwo 2100ms 350ms;
+}
+
+.book3 {
+  top: 420px;
+  left: 250px;
+  animation: leftdownthree 2200ms 350ms;
+}
+
+.book4 {
+  top: 230px;
+  left: 400px;
+  animation: topdown 3000ms 350ms;
+}
+
+.book5 {
+  top: 220px;
+  left: 550px;
+  animation: rightdownone 1800ms 300ms;
+}
+
+.book6 {
+  top: 350px;
+  left: 520px;
+  animation: rightdowntwo 1500ms 300ms;
+}
+
+.book7 {
+  top: 460px;
+  left: 570px;
+  animation: rightdownthree 2300ms 300ms;
 }
 
 form {
-  background-color: #fafafc;
-  min-height: 300px;
-  width: 736px;
-  margin: 25vh auto;
-  border-radius: 8px;
-  padding: 64px;
+  margin-left: -210px;
+  background-color: #dfbbbc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 86vh;
+  border-radius: 0 50px 50px 0;
 }
 
-fieldset {
-  border: none;
-}
-
-legend {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 34px;
-  border-bottom: 1px solid #e6e6f0;
-  width: 100%;
-  padding-bottom: 8px;
-  margin-bottom: 24px;
-}
-
-div {
+.container_register {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 20px;
+  align-items: center;
+  padding: 0 0 0 50px;
+  gap: 10px;
 }
 
-input,
+.arrow {
+  position: absolute;
+  width: 60px;
+  height: 50px;
+  top: 140px;
+  left: 1350px;
+  transform: scale(1, -1);
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+.form_datas {
+  display: flex;
+  flex-direction: column;
+}
+
 label {
-  font-size: 20px;
-  line-height: 24px;
-  color: #4e4958;
+  color: #3d2c18;
+  padding: 0 13px;
 }
 
 input,
 select {
-  background: #fafafc;
-  border: 1px solid #e6e6f0;
-  border-radius: 8px;
-  height: 56px;
-  padding: 0 24px;
-  font-size: 16px;
-  line-height: 26px;
-  color: #6c6a71;
+  border-radius: 50px;
+  padding: 8px 10px;
+  font-size: 15px;
+  line-height: 15px;
+  border: 2px solid #3d2c18;
+  background-color: #dfbbbc;
+  color: #3d2c18;
+}
+
+#nome,
+#email,
+#logradouro {
+  width: 250px;
+  margin-right: 50px;
+}
+
+#telefone,
+#complemento,
+#bairro,
+#cidade,
+#cep,
+#tipo_cliente,
+#numero,
+button {
+  width: 150px;
+}
+
+#uf {
+  width: 45px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#telefone,
+#cep {
+  margin-right: 150px;
+}
+
+.container_client_type {
+  margin-left: 70px;
 }
 
 button {
-  padding: 20px;
-  width: 100%;
-  background-color: #01b954b3;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 20px;
-  text-transform: uppercase;
-  line-height: 26px;
-  color: #ffffff;
-  border: 0;
-}
-
-button:hover {
-  background-color: #08a04c;
+  margin: 30px 120px 0 0;
+  background: linear-gradient(
+    90deg,
+    rgba(223, 187, 188, 1) 0%,
+    rgba(235, 216, 222, 1) 100%
+  );
+  border-radius: 50px;
+  padding: 18px;
+  font-size: 18px;
+  line-height: 15px;
+  border: 2px solid #3d2c18;
+  background-color: #dfbbbc;
+  color: #3d2c18;
 }
