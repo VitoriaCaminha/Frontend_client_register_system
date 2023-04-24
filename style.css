@@ -33,6 +33,7 @@ h1 {
 .shelf {
   width: 80%;
   border-radius: 50px 0 0 50px;
+  box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.2);
 }
 
 .book1,
@@ -43,6 +44,161 @@ h1 {
 .book6,
 .book7 {
   position: absolute;
+}
+
+.book1 {
+  top: 200px;
+  left: 300px;
+  animation: leftdownone 1400ms 350ms;
+}
+
+.book2 {
+  top: 320px;
+  left: 250px;
+  animation: leftdowntwo 2100ms 350ms;
+}
+
+.book3 {
+  top: 420px;
+  left: 250px;
+  animation: leftdownthree 2200ms 350ms;
+}
+
+.book4 {
+  top: 230px;
+  left: 400px;
+  animation: topdown 3000ms 350ms;
+}
+
+.book5 {
+  top: 220px;
+  left: 550px;
+  animation: rightdownone 1800ms 300ms;
+}
+
+.book6 {
+  top: 350px;
+  left: 520px;
+  animation: rightdowntwo 1500ms 300ms;
+}
+
+.book7 {
+  top: 460px;
+  left: 570px;
+  animation: rightdownthree 2300ms 300ms;
+}
+
+form {
+  margin-left: -210px;
+  background-color: #dfbbbc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 86vh;
+  border-radius: 0 50px 50px 0;
+  box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container_register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 0 50px;
+  gap: 10px;
+}
+
+.arrow {
+  position: absolute;
+  width: 60px;
+  height: 50px;
+  top: 140px;
+  left: 1350px;
+  transform: scale(1, -1);
+}
+
+.smoke {
+  position: absolute;
+  top: 540px;
+  left: 600px;
+  animation: smoke 2000ms infinite;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+.form_datas {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: #3d2c18;
+  padding: 0 13px;
+}
+
+input,
+select {
+  border-radius: 50px;
+  padding: 8px 10px;
+  font-size: 15px;
+  line-height: 15px;
+  border: 2px solid #3d2c18;
+  background-color: #dfbbbc;
+  color: #3d2c18;
+}
+
+#nome,
+#email,
+#logradouro {
+  width: 250px;
+  margin-right: 65px;
+}
+
+#telefone,
+#complemento,
+#bairro,
+#cidade,
+#cep,
+#tipo_cliente,
+#numero,
+button {
+  width: 150px;
+}
+
+#uf {
+  width: 45px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#telefone,
+#cep {
+  margin-right: 160px;
+}
+
+.container_client_type {
+  margin-left: 70px;
+}
+
+button {
+  margin: 30px 120px 0 0;
+  background: linear-gradient(
+    90deg,
+    rgba(223, 187, 188, 1) 0%,
+    rgba(235, 216, 222, 1) 100%
+  );
+  border-radius: 50px;
+  padding: 18px;
+  font-size: 18px;
+  line-height: 15px;
+  border: 2px solid #3d2c18;
+  background-color: #dfbbbc;
+  color: #3d2c18;
 }
 
 @keyframes leftdownone {
@@ -115,149 +271,12 @@ h1 {
   }
 }
 
-.book1 {
-  top: 200px;
-  left: 300px;
-  animation: leftdownone 1400ms 350ms;
-}
+@keyframes smoke {
+  0% {
+    transform: translateY(0);
+  }
 
-.book2 {
-  top: 320px;
-  left: 250px;
-  animation: leftdowntwo 2100ms 350ms;
-}
-
-.book3 {
-  top: 420px;
-  left: 250px;
-  animation: leftdownthree 2200ms 350ms;
-}
-
-.book4 {
-  top: 230px;
-  left: 400px;
-  animation: topdown 3000ms 350ms;
-}
-
-.book5 {
-  top: 220px;
-  left: 550px;
-  animation: rightdownone 1800ms 300ms;
-}
-
-.book6 {
-  top: 350px;
-  left: 520px;
-  animation: rightdowntwo 1500ms 300ms;
-}
-
-.book7 {
-  top: 460px;
-  left: 570px;
-  animation: rightdownthree 2300ms 300ms;
-}
-
-form {
-  margin-left: -210px;
-  background-color: #dfbbbc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 86vh;
-  border-radius: 0 50px 50px 0;
-}
-
-.container_register {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 0 0 50px;
-  gap: 10px;
-}
-
-.arrow {
-  position: absolute;
-  width: 60px;
-  height: 50px;
-  top: 140px;
-  left: 1350px;
-  transform: scale(1, -1);
-}
-
-h2 {
-  margin-top: 10px;
-}
-
-.form_datas {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  color: #3d2c18;
-  padding: 0 13px;
-}
-
-input,
-select {
-  border-radius: 50px;
-  padding: 8px 10px;
-  font-size: 15px;
-  line-height: 15px;
-  border: 2px solid #3d2c18;
-  background-color: #dfbbbc;
-  color: #3d2c18;
-}
-
-#nome,
-#email,
-#logradouro {
-  width: 250px;
-  margin-right: 50px;
-}
-
-#telefone,
-#complemento,
-#bairro,
-#cidade,
-#cep,
-#tipo_cliente,
-#numero,
-button {
-  width: 150px;
-}
-
-#uf {
-  width: 45px;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-#telefone,
-#cep {
-  margin-right: 150px;
-}
-
-.container_client_type {
-  margin-left: 70px;
-}
-
-button {
-  margin: 30px 120px 0 0;
-  background: linear-gradient(
-    90deg,
-    rgba(223, 187, 188, 1) 0%,
-    rgba(235, 216, 222, 1) 100%
-  );
-  border-radius: 50px;
-  padding: 18px;
-  font-size: 18px;
-  line-height: 15px;
-  border: 2px solid #3d2c18;
-  background-color: #dfbbbc;
-  color: #3d2c18;
+  100% {
+    transform: translateY(-15px);
+  }
 }
